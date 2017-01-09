@@ -33,3 +33,11 @@ https://github.com/skl/raspberry-pi-cam ohjeiden mukaan
 	Korvaa (tai lisää) picam.py tiedostoon tässä projektissa olevan picam.py tiedoston mukaan (rivit 11, 17 ja 165)
 	
 	
+#Toimintaperiaate
+PiCam ottaa tietyn väliajan välein kuvia ja vertaa niitä pikseli kerrallaan, jos riittävän monta pikseliä on muuttunut, kuva tallennetaan ja SQL-tietokantaan tehdään merkintä. Tietokannasta voidaan tietoja viedä halutessaan verkkosivulle vaikka PHP:n kautta tai tuoda niitä Google Charts -muotoon (http://stackoverflow.com/questions/12994282/php-mysql-google-chart-json-complete-example).
+Tämä on kaikkea muuta kuin hyvin suojattu projekti, mutta se toimi noin 25 päivää ennen sähkökatkoa jolloin Raspberry Pi kesken tallennuksen korruptoi koko kortin.
+
+#Tulevaisuutta ajatellen
+Turvallisuus olisi hieno lisä, piilottaa vaikka MySQL tietokannan käyttäjätunnukset ja salasanat omaan tiedostoonsa ja kaivaa ne jollain turvallisemmalla metodilla kuin raakatekstinä tiedostossa.
+Raspberry Pi:lle oma "UPS" varavirtalähteen muodossa ettei sähkökatkot tekisi temppuja niin helposti.
+Tarkkailusivun tekeminen, Google Chartsin lisääminen, HTML-puolen tekeminen jne.

@@ -3,11 +3,11 @@ SeAMKin tietotekniikan Teollisen internetin (IOT) kurssia varten tehty harjoitus
 
 #Asennusohjeet 
 Tämä projekti käyttää LAMP-stackia perustanaan Raspberry Pi:llä
-  -sudo apt-get update
-  -sudo apt-get install apache2 mysql-server php5
-  -käynnistä uudelleen
-  -konfiguroi mysql
-    -salasanana käytetään Salasana123
+ 	-sudo apt-get update
+ 	-sudo apt-get install apache2 mysql-server php5
+ 	-käynnistä uudelleen
+ 	-konfiguroi mysql
+   	-salasanana käytetään Salasana123
 		-avataan MySQL terminaali kirjoittamalla mysql ja painamalla enter linuxin terminaalissa
 		-luodaan tietokanta iot ja sinne taulukko log
 			-CREATE DATABASE iot;
@@ -21,14 +21,14 @@ Tämä projekti käyttää LAMP-stackia perustanaan Raspberry Pi:llä
 				minute INT,
 				second INT
 				)
-		
+	
   
 Liiketunnistusohjelman asentaminen
 https://github.com/skl/raspberry-pi-cam ohjeiden mukaan
-  git clone https://github.com/skl/raspberry-pi-cam.git
-  sudo -s
-  cp raspberry-pi-cam/picam /etc/init.d
-  update-rc.d picam defaults
+  	git clone https://github.com/skl/raspberry-pi-cam.git
+  	sudo -s
+  	cp raspberry-pi-cam/picam /etc/init.d
+  	update-rc.d picam defaults
   
 	Korvaa (tai lisää) picam.py tiedostoon tässä projektissa olevan picam.py tiedoston mukaan (rivit 11, 17 ja 165)
 	
